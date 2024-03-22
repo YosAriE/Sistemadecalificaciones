@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="./CSS/Style.css">
     <style>
         body {
-
+            background-image: url("imagenes/tec.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
-            background-color: rgba(163, 239, 189, 0.405)
+            background-color: rgba(255, 255, 255, 0.5);
         }
 
         .container {

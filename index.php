@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -10,22 +10,23 @@
 </head>
 
 <body>
-    <form method="post" action="">
+    <form action="validar.php" method="post">
         <img src="/imagenes/team.png" alt="">
         <h1 class="title">Bienvenido(a)</h1>
 
         <label>
             <i class="bi bi-person-circle"></i>
-            <input placeholder="Usuario" id="usuario" type="text" name="usuario">
+            <input type="text" placeholder="Usuario" name="usuario">
         </label>
         <label>
             <i class="bi bi-key-fill"></i>
-            <input placeholder="Contraseña" id="contraseña" type="password" name="contraseña">
+            <input type="password" placeholder="Contraseña" name="contraseña">
         </label>
-        <a href="#" class="link">¿Olvidaste tu contraseña?</a>
-        <button name="btningresar" id="button" class="btn" type="submit">Ingresar</button>
+    <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+        <input name="btningresar" id="button" class="btn" type="submit" value="ingresar">
         <a href="#" class="link">Crea una nueva cuenta</a>
     </form>
+
     <script src="main.js"></script>
 </body>
 
