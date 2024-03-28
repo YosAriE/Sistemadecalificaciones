@@ -9,16 +9,14 @@
     <link rel="stylesheet" href="./CSS/Style.css">
     <style>
         body {
-            background-image: url("imagenes/tec.jpg");
-            background-repeat: no-repeat;
+            background-color: rgba(163, 239, 189, 0.405);
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
-            background-color: rgba(255, 255, 255, 0.5);
         }
 
         .container {
-            padding: 15px;
+            padding: 30px;
             width: 100%;
             display: flex;
             max-width: 1100px;
@@ -67,6 +65,54 @@
         .card .contenido h3 {
             margin-bottom: 15px;
         }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffa500; /* Color naranja */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #000; 
+        }
+
+        .perfil {
+            background-color: #fff; 
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .perfil p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .perfil p b {
+            font-weight: bold;
+        }
+        .perfil-card {
+            background-color: #ffa500; /* Color naranja */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .perfil-img {
+            width: 100px; 
+            height: 100px;  
+            border-radius: 50%;  
+            margin-bottom: 10px;
+        }
+
+        .perfil-info {
+            text-align: left;
+        }
     </style>
 </head>
 
@@ -84,49 +130,14 @@
             </ul>
         </nav>
     </header>
-    <div class="container">
-        <div class="card">
-            <figure>
-                <img src="imagenes/mision.png">
-            </figure>
-            <div class="contenido">
-                <h3>Misión</h3>
-                <p>Formar profesionistas lideres, comprometidos con Mexico, con alto sentido etico de sus valores y
-                    principios, capaces de entender, comprender, resolver, innovar, competir y emprender con exito
-                    acividades en beneficio de la sociedad, a traves del uso de tecnologias y modelos educativos de
-                    vanguardia.</p>
-            </div>
-        </div>
-        <div class="card">
-            <figure>
-                <img src="imagenes/vision.png">
-            </figure>
-            <div class="contenido">
-                <h3>Visión</h3>
-                <p>Consolidarnos como una institucion de educacion superior Tecnologica de reconocido prestigio a nivel
-                    nacional e internacional, a traves de la formacion de profesionistas copetitivos, que satisfagan las
-                    expectativas y necesidades que demanda el mercado laboral.
-                </p>
-            </div>
-        </div>
-        <div class="card">
-            <figure>
-                <img src="imagenes/politica.png">
-            </figure>
-            <div class="contenido">
-                <h3>Politica</h3>
-                <p>El tecnologico de Estudios superiores de Villa Guerrero esta comprometido en la formacion integral de
-                    capital humano que contribuya al desarrollo productivo, economico y social del pais, con base en la
-                    legislacion aplicable, los procesos estrategicos implementados en la institucion, el respetp y la
-                    proteccion del medio ambiente; satisfaciendo los requisitos del estudiante y partes interesadas
-                    orientadas a la mejora continua del sistema de gestion integral, conforme a las norma ISO 9001:2015
-                    e ISO 14001:2015</p>
-            </div>
-        </div>
-    </div>
-
-
-    <script src="./JS/main.js"></script>
+    <body>
+    <h1>Modificar Datos:</h1>
+    <form action="modificar_perfil.php" method="post" enctype="multipart/form-data">
+        <label>Grado:</label>
+        <input type="text" name="grado"><br>
+        <label>Descripción:</label>
+        <input type="text" name="descripcion"><br>
+        <input type="file" name="foto_perfil"><br><br>
+        <input type="submit" value="Guardar">
+    </form>
 </body>
-
-</html>
