@@ -135,7 +135,7 @@
         <div class="row">
         <div class="card">
             <h1>PRIMER SEMESTRE</h1>
-            <a href="./semestres/primero.php" style="text-decoration: none;">
+            <a href="primero.php" style="text-decoration: none;">
                 <button style="background-color: #50C511;">
                     <i class="bi bi-arrow-right-square"></i>
                 </button>
@@ -143,39 +143,71 @@
         </div>
             <div class="card">
             <h1>SEGUNDO SEMESTRE</h1>
-            <button><i class="bi bi-arrow-right-square"></i></button>
+            <a href="segundo.php" style="text-decoration: none;">
+                <button style="background-color: #50C511;">
+                    <i class="bi bi-arrow-right-square"></i>
+                </button>
+            </a>
             </div>
             <div class="card">
             <h1>TERCER SEMESTRE</h1>
-            <button><i class="bi bi-arrow-right-square"></i></button>
+            <a href="tercero.php" style="text-decoration: none;">
+                <button style="background-color: #50C511;">
+                    <i class="bi bi-arrow-right-square"></i>
+                </button>
+            </a>
             </div>
         </div>
         <div class="row">
             <div class="card">
             <h1>CUARTO SEMESTRE</h1>
-            <button><i class="bi bi-arrow-right"></i></button>
+            <a href="cuarto.php" style="text-decoration: none;">
+                <button style="background-color: #50C511;">
+                    <i class="bi bi-arrow-right-square"></i>
+                </button>
+            </a>
             </div>
             <div class="card">
             <h1>QUINTO SEMESTRE</h1>
-            <button><i class="bi bi-arrow-right"></i></button>
+            <a href="quinto.php" style="text-decoration: none;">
+                <button style="background-color: #50C511;">
+                    <i class="bi bi-arrow-right-square"></i>
+                </button>
+            </a>
             </div>
             <div class="card">
             <h1>SEXTO SEMESTRE</h1>
-            <button><i class="bi bi-arrow-right"></i></button>
+            <a href="sexto.php" style="text-decoration: none;">
+                <button style="background-color: #50C511;">
+                    <i class="bi bi-arrow-right-square"></i>
+                </button>
+            </a>
             </div>
         </div>
         <div class="row">
             <div class="card">
             <h1>SEPTIMO SEMESTRE</h1>
-            <button><i class="bi bi-eye"></i></button>
+            <a href="septimo.php" style="text-decoration: none;">
+                <button style="background-color: #50C511;">
+                    <i class="bi bi-arrow-right-square"></i>
+                </button>
+            </a>
             </div>
             <div class="card">
             <h1>OCTAVO SEMESTRE</h1>
-            <button><i class="bi bi-eye"></i></button>
+            <a href="octavo.php" style="text-decoration: none;">
+                <button style="background-color: #50C511;">
+                    <i class="bi bi-arrow-right-square"></i>
+                </button>
+            </a>
             </div>
             <div class="card">
             <h1>NOVENO SEMESTRE</h1>
-            <button><i class="bi bi-eye"></i></button>
+            <a href="noveno.php" style="text-decoration: none;">
+                <button style="background-color: #50C511;">
+                    <i class="bi bi-arrow-right-square"></i>
+                </button>
+            </a>
             </div>
         </div>
     </div>

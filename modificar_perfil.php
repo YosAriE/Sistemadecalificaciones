@@ -32,7 +32,8 @@ if (isset($_FILES["foto_perfil"])) {
 // Obtener el id_usuario del usuario cuyo perfil se está modificando (puedes obtenerlo de la sesión o de alguna otra forma)
 $id_usuario = 1; // Esto es un ejemplo, debes reemplazarlo con el valor correcto
 
-$query = mysqli_query($conexion, "UPDATE perfiles SET grado='$grado', descripcion='$descripcion', foto_perfil='$foto_perfil' WHERE id_usuario='$id_usuario'");
+$query = mysqli_query($conexion, "UPDATE perfiles SET grado='$grado', descripcion='$descripcion', foto_perfil='$foto_perfil' WHERE usuario_id='$id_usuario'");
+
 
 header('location: mostrarperfil.php');
 ?>

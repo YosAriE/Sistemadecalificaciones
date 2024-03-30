@@ -119,7 +119,48 @@
             </ul>
         </nav>
     </header>
-    
+    <div>
+        <form action="buscar.php" method="post">
+            <input type="text" name="buscar" id="">
+            <input type="submit" value="Buscar">
+            <a href="nuevo1.php">Agregar Materia</a>
+        </form>
+    </div>
+    <div>
+    <table border="1">
+        <tr>
+            <td>ID:</td>
+            <td>Materia:</td>
+            <td>Parcial I:</td>
+            <td>Parcial II:</td>
+            <td>Ordinario I:</td>
+            <td>Ordinario II:</td>
+            <td>Opciones:</td>
+        </tr>
+        <?php
+        require 'db.php';
+        $sql = "SELECT id, materia, parcial1, parcial2, ordinario1, ordinario2 FROM primero";
+        $resultado = mysqli_query($conexion, $sql); 
+        while ($mostrar = mysqli_fetch_row($resultado)) {
+            ?>
+            <tr>
+                <td> <?php echo $mostrar[0]?></td>
+                <td> <?php echo $mostrar[1]?></td>
+                <td> <?php echo $mostrar[2]?></td>
+                <td> <?php echo $mostrar[3]?></td>
+                <td> <?php echo $mostrar[4]?></td>
+                <td> <?php echo $mostrar[5]?></td>
+                <td>
+                <a href="editar1.php?id=<?php echo $mostrar[0] ?>&materia=<?php echo $mostrar[1] ?>&parcial1=<?php echo $mostrar[2] ?>&parcial2=<?php echo $mostrar[3] ?>&ordinario1=<?php echo $mostrar[4] ?>&ordinario2=<?php echo $mostrar[5] ?>">Editar</a>
+
+                    <a href="eliminar1.php? id=<?php echo $mostrar[0] ?>">Eliminar</a>
+                </td>
+            </tr>
+            <?php
+        }
+        ?>
+    </table>
+</div>
 
 </body>
 

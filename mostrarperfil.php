@@ -134,29 +134,31 @@
         <?php
         $inc = include("db.php");
         if ($inc) {
-            $consulta = "SELECT nombre, carrera, grado, descripcion, foto_perfil FROM perfiles";
+            $consulta = "SELECT p.nombre, p.grado, p.descripcion, p.foto_perfil, c.nombre AS carrera 
+                         FROM perfiles p
+                         INNER JOIN carreras c ON p.carrera_id = c.carrera_id";
             $resultado = mysqli_query($conexion, $consulta);
             if($resultado) {
                 while($row = $resultado->fetch_array()){
                     $nombre = $row['nombre'];
-                    $carrera = $row['carrera'];
+                    $carrera = $row['carrera']; // Obtener el nombre de la carrera
                     $grado = $row['grado'];
                     $descripcion = $row['descripcion'];
                     $foto_perfil = $row['foto_perfil'];
         ?>
                     <div class="perfil-card">
                         <h2><?php echo $nombre; ?> </h2> <br>
-                    <img src="<?php echo $foto_perfil = $row['foto_perfil']; ?>" alt="Foto de perfil" style="width: 150px; height: 150px; border-radius: 50%;">
-                
-                <div class="perfil-info">
-                    <p>
-                        <b>Carrera:</b> <br> <?php echo $carrera; ?><br>
-                        <b>Grado:</b> <br> <?php echo $grado; ?><br>
-                        <b>Descripción:</b> <br>  <?php echo $descripcion; ?>
-                    </p>
-                    <form action="form_modificar_perfil.php">
-    <input type="submit" value="Modificar perfil">
-</form>
+                        <img src="<?php echo $foto_perfil; ?>" alt="Foto de perfil" style="width: 150px; height: 150px; border-radius: 50%;">
+                    
+                        <div class="perfil-info">
+                            <p>
+                                <b>Carrera:</b> <br> <?php echo $carrera; ?><br> <!-- Mostrar el nombre de la carrera -->
+                                <b>Grado:</b> <br> <?php echo $grado; ?><br>
+                                <b>Descripción:</b> <br>  <?php echo $descripcion; ?>
+                            </p>
+                            <form action="form_modificar_perfil.php">
+                                <input type="submit" value="Modificar perfil">
+                            </form>
                 </div>
             </div>
         <?php
