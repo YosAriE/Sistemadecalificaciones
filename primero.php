@@ -115,11 +115,11 @@
                 <li><a href="home.php">Inicio</a></li>
                 <li><a href="perfil.php">Perfil</a></li>
                 <li><a href="dashboardcalificaciones.php">Calificaciones</a></li>
-                <li><a href="#">Cerrar sesión</a></li>
+                <li><a href="logout.php">Cerrar sesión</a></li>
             </ul>
         </nav>
     </header>
-    <div>
+    <div> 
         <form action="buscar.php" method="post">
             <input type="text" name="buscar" id="">
             <input type="submit" value="Buscar">

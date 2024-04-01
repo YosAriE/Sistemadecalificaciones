@@ -64,3 +64,8 @@ form button {
     padding: 10px 15px;
     cursor: pointer;
 }
+
+.alerta {
+    text-align: center;
+    color: red;
+}

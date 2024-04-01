@@ -126,7 +126,7 @@
                 <li><a href="home.php">Inicio</a></li>
                 <li><a href="mostrarperfil.php">Perfil</a></li>
                 <li><a href="dashboardcalificaciones.php">Calificaciones</a></li>
-                <li><a href="index.php">Cerrar sesión</a></li>
+                <li><a href="logout.php">Cerrar sesión</a></li>
             </ul>
         </nav>
     </header>
@@ -135,8 +135,8 @@
         $inc = include("db.php");
         if ($inc) {
             $consulta = "SELECT p.nombre, p.grado, p.descripcion, p.foto_perfil, c.nombre AS carrera 
-                         FROM perfiles p
-                         INNER JOIN carreras c ON p.carrera_id = c.carrera_id";
+                FROM perfiles p
+                INNER JOIN carreras c ON p.carrera_id = c.carrera_id";
             $resultado = mysqli_query($conexion, $consulta);
             if($resultado) {
                 while($row = $resultado->fetch_array()){
@@ -146,21 +146,20 @@
                     $descripcion = $row['descripcion'];
                     $foto_perfil = $row['foto_perfil'];
         ?>
-                    <div class="perfil-card">
-                        <h2><?php echo $nombre; ?> </h2> <br>
-                        <img src="<?php echo $foto_perfil; ?>" alt="Foto de perfil" style="width: 150px; height: 150px; border-radius: 50%;">
-                    
-                        <div class="perfil-info">
-                            <p>
-                                <b>Carrera:</b> <br> <?php echo $carrera; ?><br> <!-- Mostrar el nombre de la carrera -->
-                                <b>Grado:</b> <br> <?php echo $grado; ?><br>
-                                <b>Descripción:</b> <br>  <?php echo $descripcion; ?>
-                            </p>
-                            <form action="form_modificar_perfil.php">
-                                <input type="submit" value="Modificar perfil">
-                            </form>
-                </div>
+        <div class="perfil-card">
+            <h2><?php echo $nombre; ?> </h2> <br>
+            <img src="<?php echo $foto_perfil; ?>" alt="Foto de perfil" style="width: 150px; height: 150px; border-radius: 50%;">
+            <div class="perfil-info">
+                <p>
+                    <b>Carrera:</b> <br> <?php echo $carrera; ?><br> 
+                    <b>Grado:</b> <br> <?php echo $grado; ?><br>
+                    <b>Descripción:</b> <br>  <?php echo $descripcion; ?>
+                </p>
+                <form action="form_modificar_perfil.php">
+                    <input type="submit" value="Modificar perfil">
+                </form>
             </div>
+        </div>
         <?php
                 }
             }
