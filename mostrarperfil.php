@@ -96,7 +96,7 @@
             font-weight: bold;
         }
         .perfil-card {
-            background-color: #ffa500; /* Color naranja */
+            background-color: #ff;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
@@ -141,7 +141,7 @@
             if($resultado) {
                 while($row = $resultado->fetch_array()){
                     $nombre = $row['nombre'];
-                    $carrera = $row['carrera']; // Obtener el nombre de la carrera
+                    $carrera = $row['carrera']; 
                     $grado = $row['grado'];
                     $descripcion = $row['descripcion'];
                     $foto_perfil = $row['foto_perfil'];

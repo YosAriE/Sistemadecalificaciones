@@ -34,12 +34,12 @@
             <p>Ingrese el correo que ha registrado:</p>
             <form action="">
                 <div class="form_correo"><br>
+                <i class="bi bi-envelope-exclamation"></i>
                     <input type="email" placeholder="Ingrese su correo" class="correo"><br>
                 </div><br>
                 <div>
                     <button>Enviar Link</button><br><br>
                     <a href="index.php"> Salir</a>
-                    
                 </div>
             </form>
             

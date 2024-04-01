@@ -11,8 +11,8 @@
 
 <body>
     <form action="validar.php" method="post">
-        <h2>SISTEMA DE REGISTRO <br> DE CALIFICACIONES</h2>
-        <img src="imagenes/team.png" alt="" style="width: 100px; height: 100px; margin-left: auto; margin-right: auto;">
+        <h2>SISTEMA DE REGISTRO <br> DE CALIFICACIONES</h2> <br>
+        <img src="imagenes/calif.png" alt="" style="width: 100px; height: 100px; margin-left: auto; margin-right: auto;">
         <label>
             <i class="bi bi-person-circle"></i>
             <input type="text" placeholder="Usuario" name="usuario">

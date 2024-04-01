@@ -60,7 +60,7 @@ form .link {
 form button {
     color: antiquewhite;
     border: none;
-    background: linear-gradient(to right, #8cba30, #1f8606);
+    background: linear-gradient(to right, #8cba30, #68955d);
     padding: 10px 15px;
     cursor: pointer;
 }

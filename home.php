@@ -44,6 +44,7 @@
         }
 
         .card:hover {
+            background-color: #ffffff;
             box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
             transform: translateY(-3%);
         }
@@ -67,6 +68,9 @@
         .card .contenido h3 {
             margin-bottom: 15px;
         }
+        .figure {
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -86,36 +90,36 @@
     </header>
     <div class="container">
         <div class="card">
-            <figure>
+            <figure style="text-align: center;">
                 <img src="imagenes/mision.png">
             </figure>
             <div class="contenido">
-                <h3>Misión</h3>
-                <p>Formar profesionistas lideres, comprometidos con Mexico, con alto sentido etico de sus valores y
+                <h3 >MISIÓN</h3>
+                <p style="font-size: 18px;">Formar profesionistas lideres, comprometidos con Mexico, con alto sentido etico de sus valores y
                     principios, capaces de entender, comprender, resolver, innovar, competir y emprender con exito
                     acividades en beneficio de la sociedad, a traves del uso de tecnologias y modelos educativos de
                     vanguardia.</p>
             </div>
         </div>
         <div class="card">
-            <figure>
+            <figure style="text-align: center;">
                 <img src="imagenes/vision.png">
             </figure>
             <div class="contenido">
-                <h3>Visión</h3>
-                <p>Consolidarnos como una institucion de educacion superior Tecnologica de reconocido prestigio a nivel
+                <h3>VISIÓN</h3>
+                <p style="font-size: 18px;">Consolidarnos como una institucion de educacion superior Tecnologica de reconocido prestigio a nivel
                     nacional e internacional, a traves de la formacion de profesionistas copetitivos, que satisfagan las
                     expectativas y necesidades que demanda el mercado laboral.
                 </p>
             </div>
         </div>
         <div class="card">
-            <figure>
+            <figure style="text-align: center;">
                 <img src="imagenes/politica.png">
             </figure>
             <div class="contenido">
-                <h3>Politica</h3>
-                <p>El tecnologico de Estudios superiores de Villa Guerrero esta comprometido en la formacion integral de
+                <h3>POLITICA</h3>
+                <p style="font-size: 18px;">El tecnologico de Estudios superiores de Villa Guerrero esta comprometido en la formacion integral de
                     capital humano que contribuya al desarrollo productivo, economico y social del pais, con base en la
                     legislacion aplicable, los procesos estrategicos implementados en la institucion, el respetp y la
                     proteccion del medio ambiente; satisfaciendo los requisitos del estudiante y partes interesadas
