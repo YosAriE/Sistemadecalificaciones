@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -100,7 +103,46 @@
             border-radius: 4px;
             cursor: pointer;
         }
+        .formulariomaterias {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
+        .formulariomaterias table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .formulariomaterias td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .formulariomaterias td:first-child {
+            font-weight: bold;
+        }
+
+        .formulariomaterias input[type="text"],
+        .formulariomaterias input[type="submit"] {
+            padding: 8px;
+            width: calc(100% - 16px);
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .formulariomaterias input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .formulariomaterias input[type="submit"]:hover {
+            background-color: #45a049;
+        }
 
     </style>
 </head>
@@ -114,42 +156,43 @@
             <ul class="nav-list">
                 <li><a href="home.php">Inicio</a></li>
                 <li><a href="perfil.php">Perfil</a></li>
-                <li><a href="dashboardcalificaciones.php">Calificaciones</a></li>
+                <li><a href="primero.php">Calificaciones</a></li>
                 <li><a href="logout.php">Cerrar sesión</a></li>
             </ul>
         </nav>
     </header>
-    <div>
+    <div class="formulariomaterias">
         <form action="insertar_materias.php" method="post">
-            <table border="1">
+            <table>
                 <tr>
-                    <td>Ingresa la Materia:</td>
+                    <td colspan="2"><h2>Ingresa la Materia</h2></td>
                 </tr>
                 <tr>
-                    <td> Materia: </td>
+                    <td>Materia:</td>
                     <td><input type="text" name="materia" id=""></td>
                 </tr>
                 <tr>
-                    <td>Parcial 1: </td>
+                    <td>Parcial 1:</td>
                     <td><input type="text" name="parcial1" id=""></td>
                 </tr>
                 <tr>
-                    <td>Parcial 2: </td>
+                    <td>Parcial 2:</td>
                     <td><input type="text" name="parcial2" id=""></td>
                 </tr>
                 <tr>
-                    <td>Ordinario 1: </td>
+                    <td>Ordinario 1:</td>
                     <td><input type="text" name="ordinario1" id=""></td>
                 </tr>
                 <tr>
-                    <td>Ordinario 2: </td>
+                    <td>Ordinario 2:</td>
                     <td><input type="text" name="ordinario2" id=""></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" value="Guardar"></td>
+                    <td colspan="2"><input type="submit" value="Guardar"></td>
                 </tr>
             </table>
         </form>
+        <br><br><br>
     </div>
 </body>
 

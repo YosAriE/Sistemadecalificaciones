@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,105 +12,49 @@
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
+            font-family: sans-serif; 
         }
 
-        .container {
-            padding: 30px;
-            width: 100%;
-            display: flex;
-            max-width: 1100px;
-            margin: 5%;
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-
+        h1 {
+            text-align: center; 
+            margin-top: 30px; 
         }
 
-        .card {
-            width: 100%;
-            margin: 20px;
-            border-radius: 6px;
-            overflow: hidden;
-            background: rgba(255, 253, 253, 0.5);
-            box-shadow: 0px 1px 10px rgba(238, 236, 236, 0.2);
-            cursor: default;
-            transition: all 400ms ease;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .card:hover {
-            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-            transform: translateY(-3%);
-        }
-
-        .card img {
-            padding: 15px;
-            margin-left: 15px;
-            align-items: center;
-        }
-
-        .card .contenido {
-            padding: 15px;
-            text-align: center;
-        }
-
-        .card .contenido p {
-            line-height: 1.5;
-            color: #000000;
-        }
-
-        .card .contenido h3 {
-            margin-bottom: 15px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
+        form {
+            max-width: 400px; 
+            margin: 0 auto; 
             padding: 20px;
-            background-color: #ffa500; /* Color naranja */
+            background-color: #ffa500; 
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
-            text-align: center;
-            color: #000; 
+        label {
+            display: block; 
+            margin-bottom: 5px; 
+            font-weight: bold; 
         }
 
-        .perfil {
-            background-color: #fff; 
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        input[type="text"],
+        input[type="file"],
+        input[type="submit"] {
+            width: 100%; 
+            padding: 10px; 
+            margin-bottom: 10px; 
+            box-sizing: border-box; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
         }
 
-        .perfil p {
-            margin: 0;
-            font-size: 16px;
+        input[type="submit"] {
+            background-color: #007bff; 
+            color: white; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease;
         }
 
-        .perfil p b {
-            font-weight: bold;
-        }
-        .perfil-card {
-            background-color: #ffa500; /* Color naranja */
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .perfil-img {
-            width: 100px; 
-            height: 100px;  
-            border-radius: 50%;  
-            margin-bottom: 10px;
-        }
-
-        .perfil-info {
-            text-align: left;
+        input[type="submit"]:hover {
+            background-color: #0056b3; 
         }
     </style>
 </head>
@@ -125,19 +68,29 @@
             <ul class="nav-list">
                 <li><a href="home.php">Inicio</a></li>
                 <li><a href="mostrarperfil.php">Perfil</a></li>
-                <li><a href="dashboardcalificaciones.php">Calificaciones</a></li>
+                <li><a href="primero.php">Calificaciones</a></li>
                 <li><a href="logout.php">Cerrar sesión</a></li>
             </ul>
         </nav>
     </header>
-    <body>
-    <h1>Modificar Datos:</h1>
+    <br><br>
+
     <form action="modificar_perfil.php" method="post" enctype="multipart/form-data">
-        <label>Grado:</label>
-        <input type="text" name="grado"><br>
-        <label>Descripción:</label>
-        <input type="text" name="descripcion"><br>
-        <input type="file" name="foto_perfil"><br><br>
-        <input type="submit" value="Guardar">
-    </form>
+    <h1>Modificar Datos:</h1> <br>
+    <div style="text-align: center;">
+        <img src="imagenes/user.png" alt="" style="width: 100px; height: 100px; margin: 0 auto;"><br>
+    </div>
+    <label for="grado">Grado:</label>
+    <input type="text" id="grado" name="grado"><br>
+
+    <label for="descripcion">Descripción:</label>
+    <input type="text" id="descripcion" name="descripcion"><br>
+
+    <label for="foto_perfil">Foto de perfil:</label>
+    <input type="file" id="foto_perfil" name="foto_perfil"><br><br>
+
+    <input type="submit" value="Guardar">
+    
+</form>
 </body>
+</html>

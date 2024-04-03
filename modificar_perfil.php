@@ -4,7 +4,6 @@ require 'db.php';
 $grado = $_POST['grado'];
 $descripcion = $_POST['descripcion'];
 
-// Verificar si se ha enviado una imagen
 if (isset($_FILES["foto_perfil"])) {
     $file = $_FILES["foto_perfil"];
     $nombre = $file["name"];
@@ -28,7 +27,7 @@ if (isset($_FILES["foto_perfil"])) {
         $foto_perfil = "fotos/" . $nombre;
     }
 }
-$id_usuario = 1; 
+$id_usuario = 8; 
 
 $query = mysqli_query($conexion, "UPDATE perfiles SET grado='$grado', descripcion='$descripcion', foto_perfil='$foto_perfil' WHERE usuario_id='$id_usuario'");
 

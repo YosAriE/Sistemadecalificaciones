@@ -24,6 +24,7 @@
             display: flex;
             justify-content: center;
             margin: 0 auto;
+            margin-bottom: 20px;
 
         }
 
@@ -69,7 +70,7 @@
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #ffa500; /* Color naranja */
+            background-color: #ffa500; 
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -111,7 +112,34 @@
         }
 
         .perfil-info {
-            text-align: left;
+            text-align: center;
+            font-family: Arial, sans-serif; 
+            color: #333; 
+            font-size: 16px; 
+            line-height: 1.6; 
+        }
+
+        .perfil-info p {
+            margin: 0; 
+        }
+
+        .perfil-info b {
+            font-weight: bold; 
+        }
+
+        .perfil-info input[type="submit"] {
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            padding: 10px 20px; 
+            font-size: 16px;
+            cursor: pointer; 
+            border-radius: 5px; 
+            transition: background-color 0.3s ease; 
+        }
+
+         .perfil-info input[type="submit"]:hover {
+            background-color: #0056b3; 
         }
     </style>
 </head>
@@ -125,11 +153,12 @@
             <ul class="nav-list">
                 <li><a href="home.php">Inicio</a></li>
                 <li><a href="mostrarperfil.php">Perfil</a></li>
-                <li><a href="dashboardcalificaciones.php">Calificaciones</a></li>
+                <li><a href="primero.php">Calificaciones</a></li>
                 <li><a href="logout.php">Cerrar sesión</a></li>
             </ul>
         </nav>
     </header>
+    <br><br>
     <div class="container">
         <?php
         $inc = include("db.php");
@@ -148,13 +177,13 @@
         ?>
         <div class="perfil-card">
             <h2><?php echo $nombre; ?> </h2> <br>
-            <img src="<?php echo $foto_perfil; ?>" alt="Foto de perfil" style="width: 150px; height: 150px; border-radius: 50%;">
+            <img src="<?php echo $foto_perfil; ?>" alt="Foto de perfil" style="width: 200px; height: 200px; border-radius: 50%;">
             <div class="perfil-info">
                 <p>
                     <b>Carrera:</b> <br> <?php echo $carrera; ?><br> 
                     <b>Grado:</b> <br> <?php echo $grado; ?><br>
                     <b>Descripción:</b> <br>  <?php echo $descripcion; ?>
-                </p>
+                </p><br>
                 <form action="form_modificar_perfil.php">
                     <input type="submit" value="Modificar perfil">
                 </form>

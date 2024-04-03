@@ -16,10 +16,8 @@ if($filas){
     ?>
     <?php
     include("index.php");
-    ?>
-    <h3>ERROR EN LA AUTENTICACIÓN</h3>
-    <?php
 }
 mysqli_free_result($resultado);
 mysqli_close($conexion);
 ?>
+

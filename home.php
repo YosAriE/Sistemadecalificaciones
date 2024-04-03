@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -71,6 +74,7 @@
         .figure {
             align-items: center;
         }
+        
     </style>
 </head>
 
@@ -83,7 +87,7 @@
             <ul class="nav-list">
                 <li><a href="home.php">Inicio</a></li>
                 <li><a href="mostrarperfil.php">Perfil</a></li>
-                <li><a href="dashboardcalificaciones.php">Calificaciones</a></li>
+                <li><a href="primero.php">Calificaciones</a></li>
                 <li><a href="logout.php">Cerrar sesión</a></li>
             </ul>
         </nav>
